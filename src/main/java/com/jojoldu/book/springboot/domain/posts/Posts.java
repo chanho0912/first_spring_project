@@ -1,6 +1,8 @@
 package com.jojoldu.book.springboot.domain.posts;
 
 
+import com.fasterxml.jackson.databind.ser.Serializers;
+import com.jojoldu.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,7 +16,7 @@ import javax.persistence.*;
 //  Entity class never has Setter...
 
 //  If field change required, define method
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id // table's PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK generation rules, auto increment

@@ -1,7 +1,10 @@
 package com.jojoldu.book.springboot.web.dto;
 
 import com.jojoldu.book.springboot.domain.posts.Posts;
+import lombok.Getter;
 
+
+@Getter
 public class PostsResponseDto {
 
     private Long id;
@@ -15,5 +18,4 @@ public class PostsResponseDto {
         this.content = entity.getContent();
         this.author = entity.getAuthor();
     }
-
 }
